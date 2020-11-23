@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 10px 12px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: .5rem;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+input:focus {
+  outline-color: rgba(252, 160, 0, 0.5);
+}
+
+.modalVisible {
+  display: flex !important;
+}
+
+.modalVisible .modalBody {
+  animation: modalUp .5s;
+}
+
+.visible {
+  display: block !important;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.success {
+  border: 1px solid #12C776 !important;
+}
+
+.success:focus {
+  border-color: #12C776;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+html body {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+html body #container {
+  position: relative;
+}
+
+html body #container header {
+  height: 4rem;
+}
+
+html body #container header #topBar {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+html body #container header .headerContainer {
+  background-color: #E8024A;
+  display: flex;
+}
+
+html body #container header .headerContainer h1#titleWebPage {
+  font-size: 2.6rem;
+  flex-grow: 1;
+  padding: 0 10px;
+  color: white;
+}
+
+html body #container header .headerContainer nav {
+  flex-grow: 2;
+  display: flex;
+  color: white;
+  flex-flow: row wrap;
+}
+
+html body #container header .headerContainer nav .ulList {
+  list-style: none;
+  display: flex;
+  flex-grow: 2;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+html body #container header .headerContainer nav .btnsContainer {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+html body #container header .headerContainer nav .btnsContainer #btnModal {
+  background: #F6CD1C;
+  transition: background-color .5s, color .5s;
+}
+
+html body #container header .headerContainer nav .btnsContainer #btnModal:hover {
+  transition: background-color .5s, color .5s;
+  background-color: #fa9e00;
+  color: white;
+}
+
+html body #container #modalContainer {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 10rem;
+  display: none;
+}
+
+html body #container #modalContainer .modalBody {
+  border-radius: .5rem;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  margin: auto;
+  width: 60rem;
+  background-color: #E8024A;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+html body #container #modalContainer .modalBody #modalHeader {
+  display: flex;
+  padding: 10px 20px;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid darkgray;
+}
+
+html body #container #modalContainer .modalBody #modalHeader h2 {
+  margin: 0;
+  color: #fff;
+}
+
+html body #container #modalContainer .modalBody #modalHeader span {
+  margin-left: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+html body #container #modalContainer .modalBody #modalHeader #btnClose {
+  margin-left: auto !important;
+}
+
+html body #container #modalContainer .modalBody .form {
+  background-color: white;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+html body #container #modalContainer .modalBody .form .inputField {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+html body #container #modalContainer .modalBody .form .inputField label {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+html body #container #modalContainer .modalBody .form .inputField input, html body #container #modalContainer .modalBody .form .inputField select {
+  margin-top: .5rem;
+  height: 2.8rem;
+}
+
+html body #container #modalContainer .modalBody .form #buttonSubmit {
+  margin: 1rem;
+  transition: background-color .2s,color .2s;
+}
+
+html body #container #modalContainer .modalBody .form #buttonSubmit:hover, html body #container #modalContainer .modalBody .form #buttonSubmit:focus {
+  background-color: #fa9e00;
+  transition: background-color .2s,color .2s;
+  color: white;
+}
+
+html body #container #modalContainer .modalBody .form #buttonModify {
+  transition: background-color .2s,color .2s;
+  color: black;
+  margin: 1rem;
+}
+
+html body #container #modalContainer .modalBody .form #buttonModify:hover, html body #container #modalContainer .modalBody .form #buttonModify:focus {
+  color: white;
+  transition: background-color .2s,color .2s;
+  background-color: #12C776;
+}
+
+html body #container #modalContainer .modalBody#modalBodyEdit span::before {
+  content: 'id-corso:';
+}
+
+html body #container main {
+  padding: 0 20rem;
+  margin-top: 10rem;
+}
+
+html body #container main #listaRoot {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+}
+
+html body #container main #emptyList {
+  font-weight: 100;
+  font-size: 3rem;
+  text-align: center;
+  margin: auto;
+  text-transform: uppercase;
+}
+
+html body #container main .cardCourse {
+  background-color: #ebebeb;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: .5rem;
+  border: 1px solid #ebebeb;
+  border-top: 1rem solid darkgray;
+  padding: 1.2rem 1rem;
+}
+
+html body #container main .cardCourse img {
+  height: 30rem;
+  margin-bottom: 1rem;
+}
+
+html body #container main .cardCourse .btnCourseContainer i {
+  font-size: 1.8rem;
+  padding-left: .5rem;
+}
+
+html body #container main .cardCourse .btnCourseContainer #modify {
+  margin-right: 1.5rem;
+  color: #fff;
+  background-color: #fa9e00;
+}
+
+html body #container main .cardCourse .btnCourseContainer #delete {
+  color: #fff;
+  background-color: #E8024A;
+}
+
+html body #container main #filterContainer {
+  display: none;
+  background-color: #ebebeb;
+  border-radius: .5rem;
+  padding: 10px 12px;
+}
+
+html body #container main #filterContainer #searchForm {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: start;
+  text-align: left;
+  padding-left: 40rem;
+}
+
+html body #container main #filterContainer label, html body #container main #filterContainer input, html body #container main #filterContainer button {
+  margin: 5px;
+  display: block;
+}
+
+html body #container main #filterContainer input {
+  height: 3rem;
+  width: 50rem;
+}
+
+html body #container main #filterContainer button {
+  background: black;
+  color: white;
+}
+
+@keyframes modalUp {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

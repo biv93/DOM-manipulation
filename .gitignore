@@ -1,0 +1,4 @@
+#Ignore the scss directory
+assets/scss
+*.scss
+.DS_Store

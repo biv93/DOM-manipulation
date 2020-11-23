@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://i1.wp.com/www.jeremysmola.com/wp-content/uploads/2019/04/logo-javascript-logo-png-transparent.png?fit=1200%2C1200&ssl=1&w=640" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+   <link rel="stylesheet" href="./assets/css/stile.css">
+    <title>Corso di Frontend</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="topBar">
+                <div id="icon">
+                    <span><i class="fa fa-user"></i> nome utente</span>
+                </div>
+            </div>
+            <div class="headerContainer">
+                <h1 id="titleWebPage">Corsi di Frontend</h1>
+                <nav id="navContainer">
+                    <ul class="ulList">
+                        <li>la scuola</li>
+                        <li>news</li>
+                    </ul>
+                    <div class="btnsContainer">
+                        <button class="btn" id="btnModal">aggiungi corso</button>
+                    <button class="btn" id="btnFilter">filtra</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+     <div id="modalContainer">
+          <div class="modalBody">
+            <div id="modalHeader">
+                <h2 id="textContent"></h2><span id="idCourse"></span>
+                <button type="button" class="btn btnRemove" id="btnClose">X chiudi</button>
+           </div>
+            <form class="form" id="modalCourse" novalidate>
+                <div class="inputField">
+                    <label for="titoloCorso">titolo corso</label>
+                    <input 
+                        type="text" 
+                        value=""
+                        name="corsoTitolo" 
+                        id="titoloCorso">
+                </div>
+                <div class="inputField">
+                    <label for="temaCorso">tematica corso</label>
+                    <input 
+                        type="text" 
+                        value=""
+                        name="corsoTema" 
+                        id="temaCorso">
+                </div>
+                <div class="inputField">
+                    <label for="livelloCorso">Livello del Corso</label>
+                    <select  
+                        id="livelloCorso">
+                        <option value="">Seleziona un lv.</option>
+                        <option value="Principiante">Principiante</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Esperto">Esperto</option>
+                    </select>
+                </div>
+                <div class="inputField">
+                    <label for="immagineCorso">immagine corso</label>
+                    <input 
+                        type="text" 
+                        value=""
+                        name="immagineCorso" 
+                        id="immagineCorso">
+                </div>
+                <button type="submit" class="btn" id="buttonSubmit">aggiungi</button>
+                <button type="click" class="btn" id="buttonModify" >applica modifiche</button>
+            </form>
+          </div>
+        </div>
+        <main>
+            <div id="filterContainer">
+                <form id="searchForm" novalidate>
+                    <label for="filter">Filtra la lista:</label>
+                    <input 
+                        type="text" 
+                        name="filter" 
+                        id="filter" 
+                        value="">
+                    <button 
+                        type="button"
+                        id="idCheckedBox" 
+                        class="buttonClear btn">azzera lista</button>
+                </form>
+            </div>
+            <div id="containerLista">
+                <h2>Lista corsi</h2><strong>Numero di corsi presenti:<span id="totCorsi"></span></strong>
+                <hr>                
+                <ul id="listaRoot" class="listaCorsi">
+                </ul>
+                <div id="emptyList">
+                    <strong>ಥ_ಥ  al momento non ci sono corsi  ಥ_ಥ</strong>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
