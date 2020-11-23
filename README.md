@@ -1,8 +1,9 @@
-# Esempio di manipolazione DOM
-È possibile aggiungere, modificare, eliminare un corso sfruttando la programmazione procedurale.
+# DOM MANIPULATION
+**Manipulate DOM is very important to change a document by javascript**
+In this project we can add,edit and delete some "course"
 
-Vengono trattati:
+Topics covered :
 - array
-- oggetti letterali
-- funzioni
-- eventi
+- licteral object
+- fuction (ARROW)
+- handle events
